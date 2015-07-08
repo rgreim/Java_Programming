@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Zeitscheissssss</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/nonsensecss.css" rel="stylesheet" type="text/css"/>
+        <script>
+            function date() {
+                var a = new Date();
+                var Day = a.getDate();
+                var Month = a.getMonth() + 1;
+                var Year = a.getFullYear();
+                var d = "Datum: " + Day + "." + Month + "." + Year;
+                document.getElementById("date").innerHTML = d;
+            }
+            function time() {
+                var a = new Date();
+                var Hour = a.getUTCHours();
+                var Minute = a.getUTCMinutes();
+                var Seconds = a.getUTCSeconds();
+                if(Seconds < 10){
+                    Seconds = "0" + Seconds;
+                }
+                if (Seconds % 2 !== 0) {
+                    Seconds = "<b>" + Seconds + "</b>";
+                }
+                var t = "Zeit: " + Hour + ":" + Minute + ":" + Seconds;
+                document.getElementById("time").innerHTML = t;
+                //table shtuff
+                var create = document.createElement("tr");
+                var data = document.createElement("td");
+                data.innerHTML = t;
+                //var timeText = document.createTextNode(t);
+                create.appendChild(data);
+                document.getElementById("table").appendChild(create);
+                var rows = document.getElementsByTagName("tr");
+                //for (i = 0; i < rows.length; i++) {
+                if ((rows.length - 1) % 2 === 0) {
+                    rows[rows.length - 1].style.backgroundColor = "Blue";
+                }
+                //}
+
+            }
+            function setBla() {
+                date();
+                time();
+            }
+            window.onload = function () {
+                window.setInterval(setBla, 1000);
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Hier gibts viel Zeitscheisssss.</h1>
+        <div id="date"></div>
+        <div id="time"></div>
+        <a href="../index.html">Zurück zu anderem nonsense?</a>
+        <table id= "table">
+            <tr>
+                <th>
+                    Time Log
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Fasta input</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function fastaParser(event) {
+                var input = event.target;
+                var reader = new FileReader();
+                reader.readAsText(input.files[0]);
+                reader.onload = function () {
+                    var text = reader.result;
+                    var texth = text.match(/^(>.*)/);
+                    var textb = text.replace(/^.*/g, "").replace(/\n/g, "").replace(/\s/g, "");
+                    var count = 0;
+                    var gcAmount = textb.match(/[GC]/g).length;
+                    var gesamt = textb.length;
+                    var gcGehalt = gcAmount / gesamt * 100;
+                    document.getElementById("fastaHead").innerHTML = texth;
+                    document.getElementById("fastaBody").innerHTML = textb;
+                    document.getElementById("fastaGC").innerHTML = gcGehalt;
+                };
+                function prodigalParser(){
+                var inputp = event.target;
+                var readerp = new FileReader();
+                readerp.readAsText(input.files[0]);
+                readerp.onload = function () {
+                    var text = reader.result;
+                    var strand = "";
+                    var length = 0;
+                    for (i=0, i<text.length, i++){
+                        
+                    }
+        //[\s|\(](\d+)\D+(\d+)
+                }
+            }
+            ;
+            var create = document.createElement("tr");
+            var data = document.createElement("td");
+            data.innerHTML = t;
+            //var timeText = document.createTextNode(t);
+            create.appendChild(data);
+            document.getElementById("gcTable").appendChild(create);
+            var rows = document.getElementsByTagName("tr");
+            //for (i = 0; i < rows.length; i++) {
+            if ((rows.length - 1) % 2 === 0) {
+                rows[rows.length - 1].style.backgroundColor = "Blue";
+            }
+            ;
+        </script>
+    </head>
+    <body>
+        <input id = "fasta-file" type = "file" onchange ="fastaParser(event)">
+        <div id="fastaHead"></div>
+        <div id="fastaBody"></div>
+        <div id="fastaGC"></div>
+        <table id="gcTable">
+            <th>
+                Sequence-Line
+            </th>
+        <th>
+            GC-Amount
+        </th>
+</table>
+
+</body>
+</html>

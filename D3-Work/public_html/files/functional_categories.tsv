@@ -1,0 +1,26 @@
+Shortcut	Description	Color
+J	Translation, ribosomal structure and biogenesis 	#fcccfc
+A	RNA processing and modification 	#fcdcfc
+K	Transcription 	#fcdcec
+L	Replication, recombination and repair 	#fcdcdc
+B	Chromatin structure and dynamics 	#fcdccc
+D	Cell cycle control, cell division, chromosome partitioning 	#fcfcdc
+Y	Nuclear structure 	#fcfccc
+V	Defense mechanisms 	#fcfcbc
+T	Signal transduction mechanisms 	#fcfcac
+M	Cell wall/membrane/envelope biogenesis 	#ecfcac
+N	Cell motility 	#dcfcac
+Z	Cytoskeleton 	#ccfcac
+W	Extracellular structures 	#bcfcac
+U	Intracellular trafficking, secretion, and vesicular transport 	#acfcac
+O	Posttranslational modification, protein turnover, chaperones 	#9cfcac
+C	Energy production and conversion 	#bcfcfc
+G	Carbohydrate transport and metabolism 	#ccfcfc
+E	Amino acid transport and metabolism 	#dcfcfc
+F	Nucleotide transport and metabolism 	#dcecfc
+H	Coenzyme transport and metabolism 	#dcdcfc
+I	Lipid transport and metabolism 	#dcccfc
+P	Inorganic ion transport and metabolism 	#ccccfc
+Q	Secondary metabolites biosynthesis, transport and catabolism 	#bcccfc
+R	General function prediction only 	#e0e0e0
+S	Function unknown 	#cccccc

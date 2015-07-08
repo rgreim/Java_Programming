@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>D3TableJSON</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            tr:nth-child(even) {background: #CCC}
+        </style>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var count = 0;
+            d3.tsv("../files/functional_categories.tsv",
+                    function (data) {
+                        console.log(data)
+                        var table = d3.select("body").append("table");
+                        var thead = table.selectAll("th")
+                                .data(d3.keys(data[0]))
+                                .enter()
+                                .append("th")
+                                .text(function(data){
+                                    return data;
+                        });
+                        var row = table.selectAll("tr")
+                                .data(data)
+                                .enter()
+                                .append("tr");
+                        row.append("td")
+                                .text(function(data){
+                                    return data[0];
+                        });
+                        row.append("td")
+                                .text(function(data){
+                                    return data[1];
+                                });
+                    });
+        </script>
+    </body>
+</html>
