@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Greim-Uebung03">
+    <output-path>$PROJECT_DIR$/out/artifacts/Greim_Uebung03</output-path>
+    <root id="archive" name="Greim-Uebung03.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$/src" />
+      <element id="module-output" name="Webserver" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/Miniweb/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
